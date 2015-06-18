@@ -13,7 +13,7 @@
 		
 		//console.log(leagues, leagueData);
         console.log(data);
-		//vm.leagues = data;
+		vm.leagues = data;
 		
 		vm.selectLeague = function(id) {
 			$state.go("app.teams");

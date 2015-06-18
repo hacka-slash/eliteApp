@@ -8,12 +8,10 @@
 	
 		var vm = this;
 		
-		eliteApi.getLeagues(function(data){
-            vm.teams = data.teams;   
-        });
+		var data = eliteApi.getLeagueData();
 		//var data = eliteApi.getLeagues();
 		
-		//vm.teams = data;
+		vm.teams = data.teams;
 		
 	};
 	
