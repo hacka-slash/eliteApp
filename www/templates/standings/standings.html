@@ -6,11 +6,11 @@
 				{{division.divisionName}}
 			</div>
 			
-			<a class="item item-icon-right" ng-repeat="team in division.divisionStandings">
-				{{team.name}} {{team.wins}}-{{team-losses}}
+			<div class="item item-icon-right" ng-repeat="team in division.divisionStandings">
+				{{team.teamName}} {{team.wins}}-{{team.losses}}
 				
-				<i class="icon ion-chevron-right ion-accessory">
-			</a>
+                <i class="icon ion-chevron-right icon-accessory"> </i>
+			</div>
 			
 		</div>
 	</div>

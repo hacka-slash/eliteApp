@@ -11,7 +11,7 @@
 		var data = eliteApi.getLeagueData();
 		//var data = eliteApi.getLeagues();
 		
-		vm.teams = data;
+		vm.standings = data.standings;
 		
 	};
 	

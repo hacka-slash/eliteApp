@@ -11,7 +11,7 @@
 		var data = eliteApi.getLeagueData();
 		//var data = eliteApi.getLeagues();
 		
-		vm.locations = data;
+		vm.locations = data.locations;
 		
 	};
 	
