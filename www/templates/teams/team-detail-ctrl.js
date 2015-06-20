@@ -17,7 +17,8 @@
         
         var team = _.chain(data.teams)
                     .pluck("divisionTeams")
-                    .flatten().filter({"id":vm.teamId})
+                    .flatten()
+                    .filter({"id":vm.teamId})
                     .value();
         
         vm.teamName = team[0].name;
@@ -49,7 +50,7 @@
         console.log(vm.games[0]);
         
         function isTeamInGame(item) {
-            return item.team1Id === vm.teamId || item.item2Id === vm.teamId;   
+            return item.team1Id === vm.teamId || item.team2Id === vm.teamId;   
         };
         
         function getScoreDisplay(isTeam1, team1Score, team2Score) {
