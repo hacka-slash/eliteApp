@@ -1,6 +1,6 @@
 # eliteApp
-Fixing TeamDetails page by fixing its controller and making use of 'lodash'
-Had to edit the original lodash code slightly but got the display working
+Fixing the displays with formatting and using the Ionic Grids for some templates
 
-Fixed the complete list of opponents in the team-detail's screen.
-    ..edit to isTeamInGame()
+Next is to make use of typography
+
+After that, made use of cards for the Game.html and its controller
