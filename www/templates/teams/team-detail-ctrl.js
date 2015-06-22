@@ -2,9 +2,9 @@
 (function() {
 	'use strict';
 	
-	angular.module('starter.controllers').controller('teamDetailCtrl', ['$stateParams','eliteApi', teamDetailCtrl]);
+	angular.module('starter.controllers').controller('teamDetailCtrl', ['$ionicPopup','$stateParams','eliteApi', teamDetailCtrl]);
 	
-	function teamDetailCtrl($stateParams, eliteApi) {
+	function teamDetailCtrl($ionicPopup, $stateParams, eliteApi) {
 		var vm = this;
         
 		console.log("$stateParams", $stateParams);
@@ -71,7 +71,25 @@
                     .find({"teamId":vm.teamId})
                     .value();
         
-        console.log(vm.teamStanding);
+        //console.log(vm.teamStanding);
+        
+        vm.following = false;
+        
+        vm.toggleFollow = function(){
+            if(vm.following){
+                var confirmPopup = $ionicPopup.confirm({
+                    title: "Unfollow?",
+                    template: 'Are you sure you want to unfollow?'
+                });
+                confirmPopup.then(function(res) {
+                    if(res){
+                        vm.following = !vm.following;   
+                    }
+                });
+            } else {
+                vm.following = !vm.following;                      
+            }
+        };
 	   
 	}
 

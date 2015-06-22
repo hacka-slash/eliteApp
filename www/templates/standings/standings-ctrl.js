@@ -12,6 +12,12 @@
 		//var data = eliteApi.getLeagues();
 		
 		vm.standings = data.standings;
+        
+        /*vm.following = false;
+        
+        vm.toggleFollow = function(){
+         vm.following = !vm.following;   
+        }*/
 		
 	};
 	

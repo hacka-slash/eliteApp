@@ -5,11 +5,13 @@
 			<div class="item item-divider item-energized">
 				{{division.divisionName}}
 			<div>
-			<a ng-repeat="team in division.divisionTeams" ui-sref="app.team-detail({ id:{{team.id}}  })"><div class="item item-icon-right"  href="#/templates/teams/{{team.id}}">
-				{{team.name}}
-				
-                <i class="icon ion-chevron-right icon-accessory"></i>
-                </div></a>
+			<a ng-repeat="team in division.divisionTeams" ui-sref="app.team-detail({ id:{{team.id}}  })">
+                <div class="item item-icon-right"  href="#/templates/teams/{{team.id}}">
+                    {{team.name}}
+
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </div>
+            </a>
 		</div>
 		
 		
